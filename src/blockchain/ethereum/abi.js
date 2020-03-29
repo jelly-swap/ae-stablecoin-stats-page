@@ -68,7 +68,7 @@ export default [
         type: 'address'
       },
       {
-        indexed: true,
+        indexed: false,
         internalType: 'string',
         name: 'aeAddress',
         type: 'string'
@@ -186,7 +186,7 @@ export default [
         type: 'address'
       },
       {
-        indexed: true,
+        indexed: false,
         internalType: 'string',
         name: 'burnTxHash',
         type: 'string'

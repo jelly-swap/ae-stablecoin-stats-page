@@ -4,10 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { ToastMessage } from 'rimble-ui';
+
+import 'react-toastify/dist/ReactToastify.min.css';
+
 ReactDOM.render(
-  <React.StrictMode>
+  <>
+    <ToastMessage.Provider ref={node => (window.toastProvider = node)} />
     <App />
-  </React.StrictMode>,
+  </>,
   document.getElementById('root')
 );
 
