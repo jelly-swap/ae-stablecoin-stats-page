@@ -176,6 +176,24 @@
     bottom: 0;
     width: 100%;
 
+    .medium {
+      position: absolute;
+      left: 11px;
+      padding: 4px;
+      img {
+        height: 25px;
+      }
+    }
+
+    .ae {
+      position: absolute;
+      left: 49px;
+      padding: 4px;
+      img {
+        height: 25px;
+      }
+    }
+
     img {
       height: 35px;
     }
