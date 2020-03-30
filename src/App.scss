@@ -1,114 +1,180 @@
 .App {
   height: 100%;
-  display: grid;
-  grid-template-columns: 20% 30% 30% 20%;
-  grid-template-rows: 8% 22% 10% 30% 24% 6%;
+  position: relative;
+  min-height: 703px;
 
-  .amount {
-    font-size: 35px;
+  @media screen and (max-width: 700px) {
+    min-height: 801px;
   }
 
-  .address {
-    font-size: 13px;
+  .card {
+    padding: 3px;
+  }
 
-    a {
-      word-wrap: break-word;
+  .appWrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 93%;
+    margin: auto;
+    height: calc(100% - 145px);
+
+    .info {
+      text-align: center;
+      max-width: 1111px;
+      width: 100%;
+      margin-bottom: 39px;
+
+      .info-content {
+        padding: 13px;
+
+        .address {
+          width: 751px;
+          margin: auto;
+
+          @media screen and (max-width: 850px) {
+            width: 98%;
+          }
+        }
+      }
+    }
+
+    .ae-dai-wrapper {
+      display: grid;
+      grid-template-columns: 48% 48%;
+      max-width: 1111px;
+      width: 100%;
+      grid-gap: 4%;
+
+      .ae-wrapper,
+      .dai-wrapper {
+        display: grid;
+        grid-template-rows: 32% 64%;
+        grid-gap: 4%;
+
+        .address {
+          .long-address {
+            @media screen and (max-width: 850px) {
+              display: none;
+            }
+          }
+          .short-address {
+            display: none;
+            @media screen and (max-width: 850px) {
+              display: inline;
+              font-size: 16px;
+            }
+          }
+          a {
+            @media screen and (max-width: 1050px) {
+              font-size: 14px;
+            }
+
+            @media screen and (max-width: 930px) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .ae-wrapper {
+        .ae-header {
+          text-align: center;
+
+          div {
+            margin-top: 0.3em;
+          }
+        }
+
+        .ae-card {
+          text-align: center;
+          min-height: 201px;
+
+          img {
+            margin-top: 5px;
+            height: 50px;
+          }
+
+          .amount {
+            margin-block-end: 0.67em;
+          }
+
+          .holders {
+            font-size: 13px;
+            font-weight: 400;
+          }
+          h1 {
+            @media screen and (max-width: 530px) {
+              font-size: 25px;
+            }
+            @media screen and (max-width: 403px) {
+              font-size: 21px;
+            }
+          }
+        }
+      }
+
+      .dai-wrapper {
+        .dai-header {
+          text-align: center;
+
+          div {
+            margin-top: 0.3em;
+          }
+        }
+
+        .dai-card {
+          text-align: center;
+          min-height: 201px;
+
+          img {
+            margin-top: 5px;
+            height: 50px;
+          }
+          h1 {
+            @media screen and (max-width: 530px) {
+              font-size: 25px;
+            }
+            @media screen and (max-width: 403px) {
+              font-size: 21px;
+            }
+          }
+        }
+      }
     }
   }
 
   header {
     border-radius: 25px;
     background: #f9f9f9;
-    box-shadow: 20px 20px 60px #d4d4d4,
-      -20px -20px 60px #ffffff;
+    box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
 
     display: flex;
-    grid-column: 1/5;
-    grid-row: 1/1;
     height: 67px;
 
     .header-content {
-      display: flex;
       width: 100%;
+      display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
 
-      .header-caption {
-        width: 100%;
-        text-align: center;
+      img {
+        width: 45px;
+        position: absolute;
+        left: 13px;
       }
-    }
-
-    img {
-      margin-left: 15px;
-      width: 45px;
-    }
-  }
-
-  .info {
-    grid-row: 2/2;
-    grid-column: 2/4;
-    text-align: center;
-  }
-
-  .ae-header {
-    grid-row: 3/4;
-    grid-column: 2/3;
-    text-align: center;
-
-    div {
-      margin-top: 0.3em;
-    }
-  }
-
-  .ae-card {
-    grid-row: 4/5;
-    grid-column: 2/3;
-    text-align: center;
-
-    img {
-      margin-top: 5px;
-      height: 50px;
-    }
-
-    .amount {
-      margin-block-end: 0.67em;
-    }
-
-    .holders {
-      font-size: 13px;
-      font-weight: 400;
-    }
-  }
-
-  .dai-header {
-    grid-row: 3/4;
-    grid-column: 3/3;
-    text-align: center;
-
-    div {
-      margin-top: 0.3em;
-    }
-  }
-
-  .dai-card {
-    grid-row: 4/5;
-    grid-column: 3/4;
-    text-align: center;
-
-    img {
-      margin-top: 5px;
-      height: 50px;
     }
   }
 
   footer {
     justify-content: center;
-
-    grid-column: 1/5;
-    grid-row: 6/6;
     text-align: center;
     font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 
     img {
       height: 35px;
