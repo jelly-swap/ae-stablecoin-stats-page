@@ -1,0 +1,16 @@
+.mint-content {
+  max-width: 651px;
+  margin: auto;
+
+  @media screen and (max-width: 701px) {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input,
+  button {
+    margin-bottom: 0px;
+  }
+}

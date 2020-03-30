@@ -86,14 +86,14 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={'mint-content'}>
       <Input
         style={{
           borderColor: amountError && 'red'
         }}
-        type="number"
+        type='number'
         required={true}
-        placeholder="0.00"
+        placeholder='0.00'
         onChange={e => onAmountInputChange(e.target.value)}
         value={amount}
         my={4}
@@ -101,9 +101,9 @@ function App() {
       ></Input>
 
       <Input
-        type="text"
+        type='text'
         required={true}
-        placeholder="AE Address"
+        placeholder='AE Address'
         onChange={e => setAddress(e.target.value)}
         value={address}
         my={4}
