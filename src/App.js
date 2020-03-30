@@ -13,6 +13,8 @@ import { AES_ADDRESS, MULTISIG_ADDRESS } from './config';
 import AESLogo from './images/AES.svg';
 import DAILogo from './images/DAI.svg';
 import JellySwapLogo from './images/jelly-swap.png';
+import MediumLogo from './images/medium.png';
+import AELogo from './images/ae.png';
 
 import './App.scss';
 
@@ -111,7 +113,29 @@ function App() {
 
         <footer>
           <div>Powered by JellySwap@2020</div>
+          <a
+            className='medium'
+            href={'https://medium.com/jelly-market/aes-stablecoin-91bac074a4b3'}
+            alt='medium'
+            target={'_blank'}
+            rel='noopener noreferrer'
+          >
+            <img src={MediumLogo} alt={'Medium'} />
+          </a>
+
           <img src={JellySwapLogo} alt={'Logo'} />
+
+          <a
+            className='ae'
+            href={
+              'https://forum.aeternity.com/t/jellyswap-ae-stablecoin-progress/6470/20'
+            }
+            alt='ae-forum'
+            target={'_blank'}
+            rel='noopener noreferrer'
+          >
+            <img src={AELogo} alt={'ae'} />
+          </a>
         </footer>
       </div>
     </UseWalletProvider>
