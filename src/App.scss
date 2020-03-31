@@ -1,10 +1,10 @@
 .App {
   height: 100%;
   position: relative;
-  min-height: 703px;
+  min-height: 743px;
 
-  @media screen and (max-width: 700px) {
-    min-height: 801px;
+  @media screen and (max-width: 713px) {
+    min-height: 901px;
   }
 
   .card {
@@ -30,7 +30,7 @@
         padding: 13px;
 
         .address {
-          width: 751px;
+          max-width: 779px;
           margin: auto;
 
           @media screen and (max-width: 850px) {
@@ -46,12 +46,21 @@
       max-width: 1111px;
       width: 100%;
       grid-gap: 4%;
+      min-height: 351px;
 
       .ae-wrapper,
       .dai-wrapper {
         display: grid;
-        grid-template-rows: 32% 64%;
+        grid-template-rows: 28% 68%;
         grid-gap: 4%;
+
+        .amount {
+          margin-block-end: 0.67em;
+          font-size: 26px;
+          @media screen and (max-width: 403px) {
+            font-size: 23px;
+          }
+        }
 
         .address {
           .long-address {
@@ -80,6 +89,9 @@
 
       .ae-wrapper {
         .ae-header {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
           text-align: center;
 
           div {
@@ -92,12 +104,8 @@
           min-height: 201px;
 
           img {
-            margin-top: 5px;
-            height: 50px;
-          }
-
-          .amount {
-            margin-block-end: 0.67em;
+            margin-top: 11px;
+            height: 59px;
           }
 
           .holders {
@@ -118,6 +126,9 @@
       .dai-wrapper {
         .dai-header {
           text-align: center;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
 
           div {
             margin-top: 0.3em;
@@ -129,8 +140,8 @@
           min-height: 201px;
 
           img {
-            margin-top: 5px;
-            height: 50px;
+            margin-top: 11px;
+            height: 59px;
           }
           h1 {
             @media screen and (max-width: 530px) {
