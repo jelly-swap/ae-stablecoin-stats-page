@@ -5,7 +5,7 @@
   "dependencies": {
     "@aeternity/aepp-sdk": "^7.2.1",
     "ethers": "^4.0.46",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-favicon": "^2.0.1",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
